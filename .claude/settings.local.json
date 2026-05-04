@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\HP\\\\Desktop\\\\project\\\\brew-my-spot\" -Hidden -ErrorAction SilentlyContinue | Format-List -Property Name, PSIsContainer; \\(Get-Item -Path \"C:\\\\Users\\\\HP\\\\Desktop\\\\project\\\\brew-my-spot\" -Force | Measure-Object\\).Count)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\HP\\\\Desktop\\\\project\" | Format-Table -Property Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Dir\"}else{\"File\"}}})"
+    ]
+  }
+}
